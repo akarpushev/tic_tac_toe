@@ -28,6 +28,7 @@ draw_field()
 def draw_field_step(x, y, symbol):
     field = init_field(size, EMPTY_CELL)
     field[y - 1][x - 1] = symbol
+    #return field
     draw_field()
 
 # def get_win():

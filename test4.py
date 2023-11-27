@@ -1,14 +1,15 @@
-def field_size():
-    size = int(input('Введите размер поля: '))
-    return size
-
-field_size = field_size()
-map = list(range(1, (field_size**2)+1))
+#def field_size():
+#size = int(input('Введите размер поля: '))
+    #return size
+#field_size()
+#field_size = field_size()
+map = list(range(1, (size**2)+1))
 #print(map)
 
 def print_map():
+    size = int(input('Введите размер поля: '))
     j = 0
-    size = field_size
+    #size = field_size()
     x = size
     for i in range(size):
         print(map[j:size], end="\n")
