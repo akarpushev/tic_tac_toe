@@ -1,10 +1,10 @@
 #def field_size():
-#size = int(input('Введите размер поля: '))
+size = int(input('Введите размер поля: '))
     #return size
 #field_size()
 #field_size = field_size()
 map = list(range(1, (size**2)+1))
-#print(map)
+print(map)
 
 def print_map():
     size = int(input('Введите размер поля: '))
