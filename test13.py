@@ -1,18 +1,17 @@
 a = [
-    ['X', 'X', 'X'],
+    ['X', 'X', 'P'],
     ['X', ' ', ' '],
-    ['X', ' ', ' ']
+    ['X', '0', ' ']
 ]
 size = 3
 def get_win():
     win = None
     for i in range(size):
-        if all(a[i]) == 'X': # or all(a[:][i]) == 'X':
-        #if a[:][0] == 'X':
-        #if a[0].count('X') == size:
-            win = "Первый игрок"
-        elif a[i].count('0') == size:
-            win = "Второй игрок"
+        for j in range(size):
+            if set(a[i]) == set('X') or set(a[::][j]) == set('X'):
+                win = "Первый игрок"
+            elif set(a[i]) == set('0') or set(a[i][0]) == set('0'):
+                win = "Второй игрок"
     print(win)
 
 get_win()

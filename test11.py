@@ -3,18 +3,16 @@ size = int(input('Введите размер поля: '))
 
 
 def init_field(size: int, empty_cell: str = EMPTY_CELL):
-   print(f'Размер поля {size} x {size}')
-   return [[empty_cell] * size for _ in range(size)]
+    return [[empty_cell] * size for _ in range(size)]
 
 
 print()
 field = init_field(size, EMPTY_CELL)
-print()
 
 
 def draw_field():
-   for i in range(size):
-      print(field[i])
+    for i in range(size):
+        print(field[i])
 
 
 draw_field()
@@ -27,7 +25,6 @@ def field_step(x, y, symbol):
 
 
 def draw_field_step():
-    #field = field_step(x, y, symbol)
     for i in range(size):
         print(field[i])
 
@@ -35,20 +32,18 @@ def draw_field_step():
 def get_win():
     win = None
     for i in range(size):
-        if all(field[i]) == True or all(field[:][i]) == True:
+        if set(field[i]) == set('X'):
             win = "Первый игрок"
-        elif field[i].count('0') == size:
+        if set(field[i]) == set('0'):
             win = "Второй игрок"
     return win
 
 
-#game_over = False
 count = 0
 player1 = True
 
 while count < size ** 2:
-    #draw_field()
-    if player1 == True:
+    if player1:
         symbol = 'X'
         print('Ход первого игрока')
         x = int(input('Введите координату х: '))
@@ -60,17 +55,13 @@ while count < size ** 2:
         y = int(input('Введите координату y: '))
     count += 1
     field_step(x, y, symbol)
-    print(count)
-    #print(game_over)
     win = get_win()
-    if win != None:
+    if win is not None:
         draw_field()
         print("Победил", win)
         break
-        #game_over = True
     else:
         draw_field()
         if count == size ** 2:
             print('Ничья')
-        #game_over = False
-    player1 = not (player1)
+    player1 = not player1
