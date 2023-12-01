@@ -51,7 +51,7 @@ def get_player_move():
         if 0 < x <= size and 0 < y <= size:
             return x, y
         else:
-            print(f'Неверный ввод. Введите координату х от 1 до {size}')
+            print(f'Неверный ввод. Введите номер от 1 до {size}')
 
 
 def get_win(field):
