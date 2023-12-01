@@ -36,15 +36,14 @@ def field_step(x, y, symbol):
         :param y:
         :param symbol:
         :return field:
-        """
+    """
     field[y - 1][x - 1] = symbol
     return field
 
 
 def get_win(field):
     """
-        Функция определяет победителя
-            то возвращаем False
+    Функция определяет победителя
         :param field:
         :return win:
     """

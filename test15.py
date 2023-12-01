@@ -1,11 +1,17 @@
-n = 4
-m = 4
-A = [0] * n
-for i in range(n):
-    A[i] = [0] * m
-print(A)
+maps = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+a = []
+for i in range(3):
 
-A = []
-for i in range(n):
-    A.append([0] * m)
-print(A)
+    for j in range(3):
+        a.append(maps[j][-i+2])
+    print(a[i:i+3])
+
+
+
+print(a)
+print(a[:3])
+print(a[3:6])
+
+
+
+
