@@ -46,8 +46,8 @@ def get_player_move():
         :return x, y:
     """
     while True:
-        x = int(input(f'Введите координату х от 1 до {size}: '))
-        y = int(input(f'Введите координату y от 1 до {size}: '))
+        x = int(input(f'Введите номер столбца от 1 до {size}: '))
+        y = int(input(f'Введите номер ряда от 1 до {size}: '))
         if 0 < x <= size and 0 < y <= size:
             return x, y
         else:
